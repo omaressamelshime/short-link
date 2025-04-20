@@ -2,7 +2,7 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>اختصر رابطك باحتراف</title>
+  <title>تغيير الروابط</title>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
@@ -88,11 +88,11 @@
 </head>
 <body>
 
-  <h1>اختصر رابطك بسهولة ✂️</h1>
+  <h1>اعد تشكيل رابطك ✂️</h1>
   <div class="container">
-    <input type="text" id="urlInput" placeholder="حط الرابط هنا">
+    <input type="text" id="urlInput" placeholder="ضع الرابط هنا">
     <input type="text" id="customText" placeholder="ضع عنوان الرابط">
-    <button onclick="shorten()">🚀 اختصر الرابط الآن</button>
+    <button onclick="shorten()">🚀 ابدا بالتغيير</button>
     <div id="result"></div>
   </div>
 
@@ -139,13 +139,13 @@
       if (shortUrl.startsWith("http")) {
         const parts = shortUrl.split('//');
         const finalUrl = `https://${prefix}@${parts[1]}`;
-        resultDiv.innerHTML = `✅ رابطك المختصر:<br><a href="${finalUrl}" target="_blank">${finalUrl}</a>`;
+        resultDiv.innerHTML = `✅ رابطك المعدل:<br><a href="${finalUrl}" target="_blank">${finalUrl}</a>`;
       } else {
-        resultDiv.textContent = "❌ حصل خطأ أثناء الاختصار.";
+        resultDiv.textContent = "❌ حصل خطأ أثناء التعديل.";
       }
     } catch (error) {
       console.error(error);
-      resultDiv.textContent = "❌ فشل في الاختصار";
+      resultDiv.textContent = "❌ فشل في التعديل";
     }
   }
 </script>
